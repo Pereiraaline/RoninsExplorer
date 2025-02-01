@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilo global */
+body {
+  background-color: #181818; 
+  color: #f5f5f5; 
+  font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  max-height: min-content;
+  height: auto;
+}
+
+/* Layout da aplicação */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-height: min-content;
+}
+
+  /* Estilo para a header */
+.header {
+  background: linear-gradient(45deg, #7a3f98, #130f40, #1d4b8d); /* Gradiente com roxo, preto e azul */
+  background-size: 400% 400%;
+  width: 100%;
+  height: min-content;
+  animation: gradientMotion 10s ease infinite;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center; /* Alinha verticalmente os itens no centro */
+  justify-content: center; /* Alinha horizontalmente ao centro */
+  
+}
+
+/* Animação do gradiente */
+@keyframes gradientMotion {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Imagem ou ícone no cabeçalho */
+.header h1 {
+  margin-right: 10px;
+}
+
+.header i{
+  font-size: 4em;
+  margin-left: 10px;
+  padding: 0.2em;
+}
+
+/* Corpo do conteúdo */
+.body {
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  height: min-content;
+}
+
+.body h2{
+  text-align: center;
+  padding: 1em;
+}
+
+/* Layout em duas colunas */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 20px;;
+  max-width: max-content;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: min-content;
+}
+
+/* Estilos da seção de recursos */
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+
+/* Estilização da imagem */
+.image-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5em;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #7a3f98;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center; /* Alinha verticalmente os itens no centro */
+  justify-content: center; /* Alinha horizontalmente ao centro */
+}
+
+/* Caixa de pesquisa */
+.search {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Título da pesquisa */
+.search h3 {
+  margin-bottom: 10px;
+  color: #f5f5f5;
+}
+
+/* Estilo dos inputs */
+input {
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  width: 250px;
+  margin-right: 12px;
+  background-color: #222;
+  color: #fff;
+}
+
+/* Botão */
+button {
+  padding: 12px 25px;
+  background-color: #7a3f98;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #130f40;
+}
+
+/* Resultados */
+.result {
+  margin-top: 20px;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  width: 90%;
+  word-wrap: break-word;
+  color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .body {
+    width: 95%;
+  }
+  .header img {
+    width: 40px;
+    height: 40px;
+  }
+  .search {
+    width: 100%;
+    padding: 12px;
+  }
+  input {
+    width: 180px;
+  }
+  button {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+  }
+  .search {
+    width: 100%;
+    padding: 10px;
+  }
+  .body {
+    width: 100%;
+    padding: 15px;
+  }
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+}
