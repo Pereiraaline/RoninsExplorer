@@ -2,7 +2,7 @@
   "name": "ronin-explorer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pereiraaline.github.io/github-page/RoninsExplorer",
+  "homepage": "https://Pereiraaline.github.io/RoninsExplorer",
   "dependencies": {
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
