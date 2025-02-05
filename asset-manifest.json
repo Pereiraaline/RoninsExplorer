@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "//RoninsExplorer/static/css/main.1f753f50.css",
+    "main.js": "//RoninsExplorer/static/js/main.e02dbe34.js",
+    "static/js/488.7cb4f987.chunk.js": "//RoninsExplorer/static/js/488.7cb4f987.chunk.js",
+    "index.html": "//RoninsExplorer/index.html",
+    "main.1f753f50.css.map": "//RoninsExplorer/static/css/main.1f753f50.css.map",
+    "main.e02dbe34.js.map": "//RoninsExplorer/static/js/main.e02dbe34.js.map",
+    "488.7cb4f987.chunk.js.map": "//RoninsExplorer/static/js/488.7cb4f987.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f753f50.css",
+    "static/js/main.e02dbe34.js"
+  ]
+}
