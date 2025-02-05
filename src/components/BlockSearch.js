@@ -4,26 +4,51 @@ const BlockSearch = () => {
   const [blockNumber, setBlockNumber] = useState("");
   const [blockData, setBlockData] = useState(null);
   const [error, setError] = useState(null);
-
   const handleSearch = async () => {
     setError(null);
     setBlockData(null);
-
+  
     try {
       const response = await fetch(
-        `https://1095-34-95-219-131.ngrok-free.app/block/legder/${blockNumber}`
+        `https://1095-34-95-219-131.ngrok-free.app/block/ledger/${blockNumber}`
       );
-
-      if (!response.ok) {
-        throw new Error("Bloco não encontrado ou erro na API");
+  
+      console.log("Response status:", response.status);
+      console.log("Response headers:", response.headers);
+  
+      const text = await response.text(); // Lê a resposta como texto primeiro
+      console.log("Response body:", text);
+  
+      // Tenta converter para JSON somente se o conteúdo for JSON válido
+      try {
+        const data = JSON.parse(text);
+        setBlockData(data);
+      } catch (jsonError) {
+        throw new Error("A resposta não é um JSON válido.");
       }
-
-      const data = await response.json();
-      setBlockData(data);
     } catch (err) {
       setError(err.message);
     }
   };
+//   const handleSearch = async () => {
+//     setError(null);
+//     setBlockData(null);
+
+//     try {
+//       const response = await fetch(
+//         `https://1095-34-95-219-131.ngrok-free.app/block/ledger/${blockNumber}`
+//       );
+
+//       if (!response.ok) {
+//         throw new Error("Bloco não encontrado ou erro na API");
+//       }
+
+//       const data = await response.json();
+//       setBlockData(data);
+//     } catch (err) {
+//       setError(err.message);
+//     }
+// };
 
   return (
     <div className="search">
@@ -63,4 +88,3 @@ const BlockSearch = () => {
 };
 
 export default BlockSearch;
-
