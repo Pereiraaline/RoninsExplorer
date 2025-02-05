@@ -11,7 +11,7 @@ const BlockSearch = () => {
 
     try {
       const response = await fetch(
-        `https://api.stellar.org/v1/blocks/${blockNumber}`
+        `https://1095-34-95-219-131.ngrok-free.app/block/legder/${blockNumber}`
       );
 
       if (!response.ok) {

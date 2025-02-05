@@ -11,7 +11,7 @@ const TransactionSearch = () => {
 
     try {
       const response = await fetch(
-        `https://api.stellar.org/v1/transactions/${transactionHash}`
+        `https://1095-34-95-219-131.ngrok-free.app/transaction/hash_key/${transactionHash}`
       );
 
       if (!response.ok) {

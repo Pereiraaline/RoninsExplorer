@@ -11,7 +11,7 @@ const handleSearch = async () => {
 
   try {
     const response = await fetch(
-      `https://api.stellar.org/v1/accounts/${address}`
+      `https://1095-34-95-219-131.ngrok-free.app/balance/public_key/${address}`
     );
 
     if (!response.ok) {
